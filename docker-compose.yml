@@ -1,8 +1,8 @@
-version: '2'
+version: '3.7'
 services:
-  web:
-    # image: sdthirlwall/hugs
+  test:
     image: haskell
-    working_dir: /app
+    command: cabal new-test
+    working_dir: /usr/local/src
     volumes:
-      - ./:/app
+      - ./:/usr/local/src
